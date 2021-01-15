@@ -2,8 +2,8 @@ package com.amrindersingh.msscbeerservice.services.Brewing;
 
 import com.amrindersingh.msscbeerservice.config.JmsConfig;
 import com.amrindersingh.msscbeerservice.domain.Beer;
-import com.amrindersingh.msscbeerservice.events.BrewBeerEvent;
-import com.amrindersingh.msscbeerservice.events.NewInventoryEvent;
+import com.common.events.BrewBeerEvent;
+import com.common.events.NewInventoryEvent;
 import com.amrindersingh.msscbeerservice.repositories.BeerRepository;
 import com.amrindersingh.msscbeerservice.web.model.BeerDto;
 import lombok.RequiredArgsConstructor;
@@ -11,6 +11,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.jms.annotation.JmsListener;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.stereotype.Service;
+
+import javax.transaction.Transactional;
 
 @Service
 @RequiredArgsConstructor
@@ -20,6 +22,7 @@ public class BrewBeerListener {
     private final BeerRepository beerRepository;
     private final JmsTemplate jmsTemplate;
 
+    @Transactional
     @JmsListener(destination = JmsConfig.BREWING_REQUEST_QUEUE)
     public void listen(BrewBeerEvent event) {
 
@@ -32,7 +35,7 @@ public class BrewBeerListener {
 
         log.debug("Brewed beer : " + beer.getMinOnHand() + " : QOH: " + beerDto.getQuantityOnHand());
 
-        jmsTemplate.convertAndSend(JmsConfig.NEW_INVENTORY_EVENT, newInventoryEvent);
+        jmsTemplate.convertAndSend(JmsConfig.NEW_INVENTORY_QUEUE, newInventoryEvent);
     }
 
 }

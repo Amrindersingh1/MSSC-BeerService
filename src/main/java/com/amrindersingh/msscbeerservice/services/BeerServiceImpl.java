@@ -1,12 +1,12 @@
 package com.amrindersingh.msscbeerservice.services;
 
-import com.amrindersingh.msscbeerservice.web.controller.NotFoundException;
-import com.amrindersingh.msscbeerservice.domain.Beer;
 import com.amrindersingh.msscbeerservice.repositories.BeerRepository;
+import com.amrindersingh.msscbeerservice.web.controller.NotFoundException;
 import com.amrindersingh.msscbeerservice.web.mappers.BeerMapper;
 import com.amrindersingh.msscbeerservice.web.model.BeerDto;
 import com.amrindersingh.msscbeerservice.web.model.BeerPagedList;
 import com.amrindersingh.msscbeerservice.web.model.BeerStyleEnum;
+import com.amrindersingh.msscbeerservice.domain.Beer;
 import lombok.RequiredArgsConstructor;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;

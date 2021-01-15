@@ -1,8 +1,8 @@
 package com.amrindersingh.msscbeerservice.bootstrap;
 
-import com.amrindersingh.msscbeerservice.domain.Beer;
 import com.amrindersingh.msscbeerservice.repositories.BeerRepository;
 import com.amrindersingh.msscbeerservice.web.model.BeerStyleEnum;
+import com.amrindersingh.msscbeerservice.domain.Beer;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
