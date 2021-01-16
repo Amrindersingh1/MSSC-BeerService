@@ -1,4 +1,4 @@
-package com.amrindersingh.msscbeerservice.web.model;
+package com.brewery.model;
 
 /**
  * Created by jt on 2019-05-12.

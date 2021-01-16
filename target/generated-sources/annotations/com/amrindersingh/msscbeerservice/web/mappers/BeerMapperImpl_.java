@@ -2,9 +2,9 @@ package com.amrindersingh.msscbeerservice.web.mappers;
 
 import com.amrindersingh.msscbeerservice.domain.Beer;
 import com.amrindersingh.msscbeerservice.domain.Beer.BeerBuilder;
-import com.amrindersingh.msscbeerservice.web.model.BeerDto;
-import com.amrindersingh.msscbeerservice.web.model.BeerDto.BeerDtoBuilder;
-import com.amrindersingh.msscbeerservice.web.model.BeerStyleEnum;
+import com.brewery.model.BeerDto;
+import com.brewery.model.BeerDto.BeerDtoBuilder;
+import com.brewery.model.BeerStyleEnum;
 import javax.annotation.processing.Generated;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2021-01-15T04:43:40-0500",
+    date = "2021-01-16T05:52:02-0500",
     comments = "version: 1.3.0.Final, compiler: javac, environment: Java 15.0.1 (Oracle Corporation)"
 )
 @Component

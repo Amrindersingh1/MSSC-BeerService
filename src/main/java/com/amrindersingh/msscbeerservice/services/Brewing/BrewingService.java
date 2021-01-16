@@ -3,7 +3,7 @@ package com.amrindersingh.msscbeerservice.services.Brewing;
 import com.amrindersingh.msscbeerservice.services.inventory.BeerInventoryService;
 import com.amrindersingh.msscbeerservice.config.JmsConfig;
 import com.amrindersingh.msscbeerservice.domain.Beer;
-import com.common.events.BrewBeerEvent;
+import com.brewery.events.BrewBeerEvent;
 import com.amrindersingh.msscbeerservice.repositories.BeerRepository;
 import com.amrindersingh.msscbeerservice.web.mappers.BeerMapper;
 import lombok.RequiredArgsConstructor;
